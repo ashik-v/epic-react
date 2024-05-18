@@ -9,8 +9,11 @@
 
   <script type="module">
     const rootElement = document.getElementById('root')
-    const myElement = React.createElement('div', {id: 'hello-world', children: 'Hello World'});
+    const helloSpan = React.createElement('span', {children: 'Hello'});
+    const worldSpan = React.createElement('span', {children: 'World'});
+    const children = [helloSpan, ' ', worldSpan];
+    const helloWorldContainer = React.createElement('div', {class: 'container', children});
     const root = ReactDOM.createRoot(rootElement);
-    root.render(myElement);
+    root.render(helloWorldContainer);
   </script>
 </body>
